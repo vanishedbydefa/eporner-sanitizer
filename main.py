@@ -77,7 +77,7 @@ def item_itterator(folder_path, items, recursive:bool):
         # Check if it's a folder
         elif os.path.isdir(item_path) and recursive:
             print(f"Entering: {item_path}")
-            item_itterator(get_folder_items(item_path)) #Here multithreading could be implemented
+            item_itterator(item_path, get_folder_items(item_path), recursive) #Here multithreading could be implemented
             print(f"Returning into: {folder_path}")
 
 def main():
